@@ -18,8 +18,8 @@
 
 ## Diagrama Entidade-Relacionamento
 
-<img src="IMG_ModeloDER_AgendadeContatos.png">
+![](IMG_ModeloDER_AgendadeContatos.png)
 
 ## Diagrama Lógico
 
-<img src="IMG_ModeloDL_AgendadeContatos.png">
+![](IMG_ModeloDL_AgendadeContatos.png)

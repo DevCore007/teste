@@ -4,18 +4,34 @@
 
 ## Ícones da Tela de Login
 
-<img src="https://placehold.co/128x128">
-<img src="https://placehold.co/128x128">
-<img src="https://placehold.co/128x128">
+![](./user-alt-1-svgrepo-com%20(2).png)
+![](./limpar-limpo.png)
+![](./verificado%20(2).png)
 
 ## Ícones da Agenda de Contatos
 
-<img src="https://placehold.co/128x128">
-<img src="https://placehold.co/128x128">
-<img src="https://placehold.co/128x128">
+![](./agenda%20(5)%20(1).png)
+![](./agenda%20(7)%20(2).png)
 
 ## Ícones da Calculadora
 
-<img src="https://placehold.co/128x128">
-<img src="https://placehold.co/128x128">
-<img src="https://placehold.co/128x128">
+![](./calculadora%20(2)%20(1).png)
+![](./calculadora%20(1)%20(1).png)
+![](zero.png)
+![](um.png)
+![](./numero-2%20(1).png)
+![](tres.png)
+![](./numero-4.png)
+![](./cinco%20(3).png)
+![](./numero-6.png)
+![](./numero-7%20(1).png)
+![](./numero-8.png)
+![](./numero-9%20(1).png)
+![](./virgula.png)
+![](./backspace%20(1).png)
+![](./simbolo-de-adicao-de-espessura.png)
+![](./menos.png)
+![](./multiplicacao.png)
+![](./divisao.png)
+![](./por-cento%20(1).png)
+![](./simbolo-igual%20(1).png)

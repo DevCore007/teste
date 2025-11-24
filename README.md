@@ -11,18 +11,23 @@ Somos uma equipe apaixonada por tecnologia e inovação, desenvolvendo soluçõe
 |:--------------|:----------|:-----------|:------------|
 |  **Arthur Herbster** |  Desenvolvedor Full-Stack | [vogel.herbster09@aluno.ifce.edu.br](vogel.herbster09@aluno.ifce.edu.br) | [github.com/HerbsterDev](https://github.com/HerbsterDev) |
 |  **Wagner Colares** | Desenvolvedor Back-End | [luizwagner169@gmail.com](luizwagner169@gmail.com) | [github.com/colarin](https://github.com/colarin) |
-| **José Satiro** | Desenvolvedor Full-Stack | [satirojose492@gmail.com](satirojose492@gmail.com) | [github.com/SatiroDev](https://github.com/SatiroDev) |
+|  **José Satiro** | Desenvolvedor Full-Stack | [satirojose492@gmail.com](satirojose492@gmail.com) | [github.com/SatiroDev](https://github.com/SatiroDev) |
 |  **Alisson Sousa** | Desenvolvedor Back-End | [sousa.alisson07@aluno.ifce.edu.br](sousa.alisson07@aluno.ifce.edu.br) | [github.com/AlissonSco](https://github.com/AlissonSco) |
 |  **Willyam Andrade** | Desenvolvedor Back-End | [andrade.medeiros10@aluno.ifce.edu.br](andrade.medeiros10@aluno.ifce.edu.br) | [github.com/willyamandrade](https://github.com/willyamandrade) |
 
 ---
 
 ## 💡 **Definição do Projeto (POO)**
-
 Nosso projeto tem como objetivo desenvolver um sistema completo aplicando os **princípios da Programação Orientada a Objetos (POO)** — **abstração**, **encapsulamento**, **herança** e **polimorfismo**.  
 
 ### 🔍 **Objetivo**
 Criar uma aplicação modular, reutilizável e de fácil manutenção, que simule um ambiente real, promovendo boas práticas de desenvolvimento de software.
+
+### 📌 **Composição do Projeto**
+
+- *️⃣ **Sistema de Login**
+- 📝 **Agenda de Contatos CRUD (Java Swing + MySQL)**
+- ➗ **App de livre escolha (Calculadora básica)**
 
 ### 🧱 **Conceitos Aplicados**
 - 🧩 **Classes e Objetos:** Modelagem de entidades reais em estruturas de código.  
@@ -32,23 +37,29 @@ Criar uma aplicação modular, reutilizável e de fácil manutenção, que simul
 
 ---
 
+## ✅ **Instalação e Utilização**
+
+
+
 ## 🛠️ **Tecnologias Utilizadas**
 
 | Ferramenta | Descrição |
 |-------------|------------|
-| 💻 **Java** | Linguagem de programação principal |
+| ☕ **Java** | Linguagem de programação principal |
 | 🧰 **Git & GitHub** | Controle de versão e colaboração |
 | 💻 **Apache NetBeans** | IDE (Ambiente de Desenvolvimento Integrado) |
+| 📐 **Java Swing** | Interface Gráfica |
 | 🧪 **MySQL Workbench** | Banco de dados |
-| 🎨 **Figma** | Design |
+| 📝 **brModelo** | Modelagem do Banco de dados |
+| 🎨 **Figma & Canva** | Design |
 | 📦 **Apache Ant** | Gerenciamento de dependências |
 
 ---
 
 ## 🌐 **Contato**
 
-📩 **E-mail:** [Clique aqui!](devcore07@gmail.com)  
-💻 **Website:** [www.technova.com](https://www.technova.com)
+📩 **E-mail:** [devcore07@gmail.com](devcore07@gmail.com)  
+📷 **Instagram:** []()
 
 ---
 

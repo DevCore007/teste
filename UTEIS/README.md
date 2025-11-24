@@ -2,14 +2,14 @@
 
 🔵 README que contém links de *videoaulas, tutoriais, documentações, referências de design* e etc que foram úteis ao desenvolvimento do projeto.
 
-## Exemplo 1
+## SQL
 
-[exemplo]()
+* [W3Schools](https://www.w3schools.com/sql/default.asp)
 
 ## Exemplo 2
 
-[exemplo]()
+* [exemplo]()
 
 ## Exemplo 3
 
-[exemplo]()
+* [exemplo]()
