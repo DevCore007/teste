@@ -26,8 +26,14 @@ Criar uma aplicação modular, reutilizável e de fácil manutenção, que simul
 ### 📌 **Composição do Projeto**
 
 - *️⃣ **Sistema de Login**
+  - Um sistema de login com usuário e senha, sem necessidade de criar uma conta.
+  - **Usuário:** admin **| Senha:** 1234
+ 
 - 📝 **Agenda de Contatos CRUD (Java Swing + MySQL)**
+  - Uma agenda de contatos com capacidade de *criação, leitura, alteração e deleção de contatos*. Possui integração com um banco de dados do **MySQL**.
+
 - ➗ **App de livre escolha (Calculadora básica)**
+  - Uma calculadora básica capaz de realizar as quatro operações básicas e porcentagem.
 
 ### 🧱 **Conceitos Aplicados**
 - 🧩 **Classes e Objetos:** Modelagem de entidades reais em estruturas de código.  
@@ -48,7 +54,7 @@ Criar uma aplicação modular, reutilizável e de fácil manutenção, que simul
 | ☕ **Java** | Linguagem de programação principal |
 | 🧰 **Git & GitHub** | Controle de versão e colaboração |
 | 💻 **Apache NetBeans** | IDE (Ambiente de Desenvolvimento Integrado) |
-| 📐 **Java Swing** | Interface Gráfica |
+| 📐 **Java Swing** | Biblioteca de Interface Gráfica |
 | 🧪 **MySQL Workbench** | Banco de dados |
 | 📝 **brModelo** | Modelagem do Banco de dados |
 | 🎨 **Figma & Canva** | Design |
