@@ -25,10 +25,13 @@ Criar uma aplicação modular, reutilizável e de fácil manutenção, que simul
 
 ### 📌 **Composição do Projeto**
 
-- *️⃣ **Sistema de Login**
+- 🔐 **Sistema de Login**
   - Um sistema de login com usuário e senha, sem necessidade de criar uma conta.
   - **Usuário:** admin **| Senha:** 1234
  
+- 📎 **Escolha de projetos**
+  - Parte do software em que se deve escolher qual programa executar: *agenda de contatos ou calculadora*.
+
 - 📝 **Agenda de Contatos CRUD (Java Swing + MySQL)**
   - Uma agenda de contatos com capacidade de *criação, leitura, alteração e deleção de contatos*. Possui integração com um banco de dados do **MySQL**.
 
