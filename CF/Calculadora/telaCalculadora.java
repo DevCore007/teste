@@ -1,0 +1,645 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package CF.Calculadora;
+
+import CF.EscolhaProjeto.telaEscolhaProjeto;
+import javax.swing.ImageIcon;
+
+/**
+ *
+ * @author User
+ */
+public class telaCalculadora extends javax.swing.JFrame {
+    char operacao;
+    String temp;
+    double num1, num2, resultado;
+    boolean modoEscuro = false;
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(telaCalculadora.class.getName());
+
+    /**
+     * Creates new form POOcalc
+     */
+    public telaCalculadora() {
+        initComponents();
+        setResizable(false);
+        setLocationRelativeTo(null);
+        aplicarTema();
+    }
+    
+    private void aplicarTema() {
+        if (modoEscuro) {
+            jPanel1.setBackground(new java.awt.Color(30, 30, 30));
+
+            tela_resultado.setBackground(new java.awt.Color(12, 12, 12));
+            tela_resultado.setForeground(new java.awt.Color(255, 255, 255));
+            tela_resultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(42, 42, 42)));
+            
+            botao_voltar.setBackground(new java.awt.Color(30, 30, 30));
+            botao_voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/voltar.png"))); // NOI18N
+            
+            mudar_tema.setBackground(new java.awt.Color(30, 30, 30));
+            mudar_tema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/brilho-do-sol.png"))); // NOI18N
+            
+            all_clear.setBackground(new java.awt.Color(18, 0, 63));
+            all_clear.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_multiplicacao.setBackground(new java.awt.Color(63, 16, 145));
+            botao_multiplicacao.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_divisao.setBackground(new java.awt.Color(63, 16, 145));
+            botao_divisao.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_porcetagem.setBackground(new java.awt.Color(63, 16, 145));
+            botao_porcetagem.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_substracao.setBackground(new java.awt.Color(63, 16, 145));
+            botao_substracao.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_somar.setBackground(new java.awt.Color(63, 16, 145));
+            botao_somar.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_apagar.setBackground(new java.awt.Color(85, 49, 173));
+            botao_apagar.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_virgula.setBackground(new java.awt.Color(51, 51, 51));
+            botao_virgula.setForeground(new java.awt.Color(255, 255, 255));
+
+            botao_igualdade.setBackground(new java.awt.Color(18, 0, 63));
+            botao_igualdade.setForeground(new java.awt.Color(255, 255, 255));
+            
+            numero_9.setBackground(new java.awt.Color(51, 51, 51));
+            numero_9.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_8.setBackground(new java.awt.Color(51, 51, 51));
+            numero_8.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_7.setBackground(new java.awt.Color(51, 51, 51));
+            numero_7.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_6.setBackground(new java.awt.Color(51, 51, 51));
+            numero_6.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_5.setBackground(new java.awt.Color(51, 51, 51));
+            numero_5.setForeground(new java.awt.Color(255, 255, 255));    
+
+            numero_4.setBackground(new java.awt.Color(51, 51, 51));
+            numero_4.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero03.setBackground(new java.awt.Color(51, 51, 51));
+            numero03.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_02.setBackground(new java.awt.Color(51, 51, 51));
+            numero_02.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_01.setBackground(new java.awt.Color(51, 51, 51));
+            numero_01.setForeground(new java.awt.Color(255, 255, 255));
+
+            numero_00.setBackground(new java.awt.Color(51, 51, 51));
+            numero_00.setForeground(new java.awt.Color(255, 255, 255));
+        } else {
+            jPanel1.setBackground(new java.awt.Color(242, 238, 249));
+
+            tela_resultado.setBackground(new java.awt.Color(251, 249, 255));
+            tela_resultado.setForeground(new java.awt.Color(0, 0, 0));
+            tela_resultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(208,208,208)));
+
+            botao_voltar.setBackground(new java.awt.Color(242, 238, 249));
+            botao_voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/voltar (1).png"))); // NOI18N
+
+            mudar_tema.setBackground(new java.awt.Color(242, 238, 249));
+            mudar_tema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/moon (1).png"))); // NOI18N
+
+            all_clear.setBackground(new java.awt.Color(169, 136, 255));
+            all_clear.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_multiplicacao.setBackground(new java.awt.Color(124, 77, 255));
+            botao_multiplicacao.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_divisao.setBackground(new java.awt.Color(124, 77, 255));
+            botao_divisao.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_porcetagem.setBackground(new java.awt.Color(124, 77, 255));
+            botao_porcetagem.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_substracao.setBackground(new java.awt.Color(124, 77, 255));
+            botao_substracao.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_somar.setBackground(new java.awt.Color(124, 77, 255));
+            botao_somar.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_apagar.setBackground(new java.awt.Color(154, 106, 255));
+            botao_apagar.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_virgula.setBackground(new java.awt.Color(212, 212, 212));
+            botao_virgula.setForeground(new java.awt.Color(0, 0, 0));
+
+            botao_igualdade.setBackground(new java.awt.Color(169, 136, 255));
+            botao_igualdade.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_9.setBackground(new java.awt.Color(212, 212, 212));
+            numero_9.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_8.setBackground(new java.awt.Color(212, 212, 212));
+            numero_8.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_7.setBackground(new java.awt.Color(212, 212, 212));
+            numero_7.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_6.setBackground(new java.awt.Color(212, 212, 212));
+            numero_6.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_5.setBackground(new java.awt.Color(212, 212, 212));
+            numero_5.setForeground(new java.awt.Color(0, 0, 0));    
+
+            numero_4.setBackground(new java.awt.Color(212, 212, 212));
+            numero_4.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero03.setBackground(new java.awt.Color(212, 212, 212));
+            numero03.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_02.setBackground(new java.awt.Color(212, 212, 212));
+            numero_02.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_01.setBackground(new java.awt.Color(212, 212, 212));
+            numero_01.setForeground(new java.awt.Color(0, 0, 0));
+
+            numero_00.setBackground(new java.awt.Color(212, 212, 212));
+            numero_00.setForeground(new java.awt.Color(0, 0, 0));
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        tela_resultado = new javax.swing.JTextField();
+        botao_voltar = new javax.swing.JButton();
+        mudar_tema = new javax.swing.JButton();
+        all_clear = new javax.swing.JButton();
+        botao_multiplicacao = new javax.swing.JButton();
+        botao_divisao = new javax.swing.JButton();
+        botao_porcetagem = new javax.swing.JButton();
+        numero_7 = new javax.swing.JButton();
+        numero_8 = new javax.swing.JButton();
+        numero_9 = new javax.swing.JButton();
+        botao_substracao = new javax.swing.JButton();
+        numero_4 = new javax.swing.JButton();
+        numero_5 = new javax.swing.JButton();
+        numero_6 = new javax.swing.JButton();
+        botao_somar = new javax.swing.JButton();
+        numero_01 = new javax.swing.JButton();
+        numero_02 = new javax.swing.JButton();
+        numero03 = new javax.swing.JButton();
+        botao_apagar = new javax.swing.JButton();
+        numero_00 = new javax.swing.JButton();
+        botao_virgula = new javax.swing.JButton();
+        botao_igualdade = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora");
+        setIconImage(new ImageIcon(getClass().getResource("/icons/logo.png")).getImage());
+
+        tela_resultado.setForeground(new java.awt.Color(255, 255, 255));
+        tela_resultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        tela_resultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(42, 42, 42)));
+        tela_resultado.addActionListener(this::tela_resultadoActionPerformed);
+        tela_resultado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tela_resultadoKeyTyped(evt);
+            }
+        });
+
+        botao_voltar.setForeground(new java.awt.Color(0, 0, 0));
+        botao_voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/voltar.png"))); // NOI18N
+        botao_voltar.setBorder(null);
+        botao_voltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_voltar.addActionListener(this::botao_voltarActionPerformed);
+
+        mudar_tema.setForeground(new java.awt.Color(0, 0, 0));
+        mudar_tema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONS/brilho-do-sol.png"))); // NOI18N
+        mudar_tema.setBorder(null);
+        mudar_tema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mudar_tema.addActionListener(this::mudar_temaActionPerformed);
+
+        all_clear.setForeground(new java.awt.Color(255, 255, 255));
+        all_clear.setText("AC");
+        all_clear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        all_clear.addActionListener(this::all_clearActionPerformed);
+
+        botao_multiplicacao.setForeground(new java.awt.Color(255, 255, 255));
+        botao_multiplicacao.setText("*");
+        botao_multiplicacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_multiplicacao.addActionListener(this::botao_multiplicacaoActionPerformed);
+
+        botao_divisao.setForeground(new java.awt.Color(255, 255, 255));
+        botao_divisao.setText("/");
+        botao_divisao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_divisao.addActionListener(this::botao_divisaoActionPerformed);
+
+        botao_porcetagem.setForeground(new java.awt.Color(255, 255, 255));
+        botao_porcetagem.setText("%");
+        botao_porcetagem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_porcetagem.addActionListener(this::botao_porcetagemActionPerformed);
+
+        numero_7.setForeground(new java.awt.Color(255, 255, 255));
+        numero_7.setText("7");
+        numero_7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_7.addActionListener(this::numero_7ActionPerformed);
+
+        numero_8.setForeground(new java.awt.Color(255, 255, 255));
+        numero_8.setText("8");
+        numero_8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_8.addActionListener(this::numero_8ActionPerformed);
+
+        numero_9.setForeground(new java.awt.Color(255, 255, 255));
+        numero_9.setText("9");
+        numero_9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_9.addActionListener(this::numero_9ActionPerformed);
+
+        botao_substracao.setForeground(new java.awt.Color(255, 255, 255));
+        botao_substracao.setText("-");
+        botao_substracao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_substracao.addActionListener(this::botao_substracaoActionPerformed);
+
+        numero_4.setForeground(new java.awt.Color(255, 255, 255));
+        numero_4.setText("4");
+        numero_4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_4.addActionListener(this::numero_4ActionPerformed);
+
+        numero_5.setForeground(new java.awt.Color(255, 255, 255));
+        numero_5.setText("5");
+        numero_5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_5.addActionListener(this::numero_5ActionPerformed);
+
+        numero_6.setForeground(new java.awt.Color(255, 255, 255));
+        numero_6.setText("6");
+        numero_6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_6.addActionListener(this::numero_6ActionPerformed);
+
+        botao_somar.setForeground(new java.awt.Color(255, 255, 255));
+        botao_somar.setText("+");
+        botao_somar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_somar.addActionListener(this::botao_somarActionPerformed);
+
+        numero_01.setForeground(new java.awt.Color(255, 255, 255));
+        numero_01.setText("1");
+        numero_01.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_01.addActionListener(this::numero_01ActionPerformed);
+
+        numero_02.setForeground(new java.awt.Color(255, 255, 255));
+        numero_02.setText("2");
+        numero_02.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_02.addActionListener(this::numero_02ActionPerformed);
+
+        numero03.setForeground(new java.awt.Color(255, 255, 255));
+        numero03.setText("3");
+        numero03.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero03.addActionListener(this::numero03ActionPerformed);
+
+        botao_apagar.setForeground(new java.awt.Color(255, 255, 255));
+        botao_apagar.setText("apagar");
+        botao_apagar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_apagar.addActionListener(this::botao_apagarActionPerformed);
+
+        numero_00.setForeground(new java.awt.Color(255, 255, 255));
+        numero_00.setText("0");
+        numero_00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        numero_00.addActionListener(this::numero_00ActionPerformed);
+
+        botao_virgula.setForeground(new java.awt.Color(255, 255, 255));
+        botao_virgula.setText(".");
+        botao_virgula.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_virgula.addActionListener(this::botao_virgulaActionPerformed);
+
+        botao_igualdade.setForeground(new java.awt.Color(255, 255, 255));
+        botao_igualdade.setText("=");
+        botao_igualdade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_igualdade.addActionListener(this::botao_igualdadeActionPerformed);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(botao_voltar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(mudar_tema))
+                    .addComponent(tela_resultado)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(numero_00, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(numero_01, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(numero_02, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botao_virgula, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botao_igualdade, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(all_clear, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botao_porcetagem, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botao_divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botao_multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(numero_7, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(numero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(numero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botao_substracao, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(numero_4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(numero_5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(numero03, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(botao_apagar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(numero_6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(botao_somar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botao_voltar)
+                    .addComponent(mudar_tema))
+                .addGap(5, 5, 5)
+                .addComponent(tela_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(all_clear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_porcetagem, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numero_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_substracao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numero_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_somar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numero_01, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero_02, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero03, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_apagar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numero_00, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_virgula, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_igualdade, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void botao_porcetagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_porcetagemActionPerformed
+       Escolhaoperacao('%');
+    }//GEN-LAST:event_botao_porcetagemActionPerformed
+
+    private void numero_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_8ActionPerformed
+       numeroDigitado("8");
+    }//GEN-LAST:event_numero_8ActionPerformed
+
+    private void numero_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_5ActionPerformed
+        numeroDigitado("5");
+    }//GEN-LAST:event_numero_5ActionPerformed
+
+    private void numero_02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_02ActionPerformed
+        numeroDigitado("2");
+    }//GEN-LAST:event_numero_02ActionPerformed
+
+    private void botao_multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_multiplicacaoActionPerformed
+        Escolhaoperacao('*');
+    }//GEN-LAST:event_botao_multiplicacaoActionPerformed
+
+    private void numero_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_7ActionPerformed
+        numeroDigitado("7");
+    }//GEN-LAST:event_numero_7ActionPerformed
+
+    private void numero_01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_01ActionPerformed
+        numeroDigitado("1");
+    }//GEN-LAST:event_numero_01ActionPerformed
+
+    private void numero03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero03ActionPerformed
+        numeroDigitado("3");
+    }//GEN-LAST:event_numero03ActionPerformed
+
+    private void botao_apagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_apagarActionPerformed
+        String texto = tela_resultado.getText();
+        if (!texto.isEmpty()) {
+            texto = texto.substring(0, texto.length() - 1);
+            tela_resultado.setText(texto);
+        }
+    }//GEN-LAST:event_botao_apagarActionPerformed
+
+    private void tela_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tela_resultadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tela_resultadoActionPerformed
+
+    private void mudar_temaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mudar_temaActionPerformed
+       modoEscuro = !modoEscuro;
+       aplicarTema();
+    }//GEN-LAST:event_mudar_temaActionPerformed
+
+    private void numero_00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_00ActionPerformed
+        numeroDigitado("0");
+    }//GEN-LAST:event_numero_00ActionPerformed
+
+    private void numero_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_4ActionPerformed
+        numeroDigitado("4");
+    }//GEN-LAST:event_numero_4ActionPerformed
+
+    private void numero_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_6ActionPerformed
+        numeroDigitado("6");
+    }//GEN-LAST:event_numero_6ActionPerformed
+
+    private void numero_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_9ActionPerformed
+        numeroDigitado("9");
+    }//GEN-LAST:event_numero_9ActionPerformed
+
+    private void botao_virgulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_virgulaActionPerformed
+        numeroDigitado(".");
+    }//GEN-LAST:event_botao_virgulaActionPerformed
+
+    private void botao_somarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_somarActionPerformed
+        Escolhaoperacao('+');
+    }//GEN-LAST:event_botao_somarActionPerformed
+
+    private void Escolhaoperacao(char ope) throws NumberFormatException {
+        operacao = ope;
+        num1 = Double.parseDouble(tela_resultado.getText());
+        tela_resultado.setText("");
+    }
+
+    private void botao_igualdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_igualdadeActionPerformed
+        num2 = Double.parseDouble(tela_resultado.getText());
+        
+        switch(operacao){
+            case '+':
+                resultado = num1 + num2;
+                break;
+            case '-':
+                resultado = num1 - num2;
+                break;
+            case '*':
+                resultado = num1 * num2;
+                break;
+            case '/':
+                if(num2 == 0){
+                    javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Não é possível dividir por zero!",
+                    "Erro",
+                    javax.swing.JOptionPane.ERROR_MESSAGE
+                );
+                tela_resultado.setText("");
+                return; // evita continuar
+                }
+                resultado = num1 / num2;
+                break;
+            case '%':
+                resultado = (num1 / 100) * num2;
+                break;
+        }
+        tela_resultado.setText(String.valueOf(resultado));
+        
+    }//GEN-LAST:event_botao_igualdadeActionPerformed
+
+    private void botao_substracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_substracaoActionPerformed
+        Escolhaoperacao('-');
+    }//GEN-LAST:event_botao_substracaoActionPerformed
+
+    private void botao_divisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_divisaoActionPerformed
+        Escolhaoperacao('/');
+    }//GEN-LAST:event_botao_divisaoActionPerformed
+
+    private void all_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_all_clearActionPerformed
+        tela_resultado.setText("");
+        num1 = 0;
+        num2 = 0;
+        resultado = 0;
+        operacao = '\0';
+    }//GEN-LAST:event_all_clearActionPerformed
+
+    private void tela_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tela_resultadoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c) && c != '.' && c != '\b') {
+            evt.consume();
+            return;
+        }
+
+        if (c == '.' && tela_resultado.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_tela_resultadoKeyTyped
+
+    private void botao_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_voltarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new telaEscolhaProjeto().setVisible(true);
+    }//GEN-LAST:event_botao_voltarActionPerformed
+
+    private void numeroDigitado(String num) {
+        temp = tela_resultado.getText();
+        temp = temp + num;
+        tela_resultado.setText(temp);
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new telaCalculadora().setVisible(true));
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton all_clear;
+    private javax.swing.JButton botao_apagar;
+    private javax.swing.JButton botao_divisao;
+    private javax.swing.JButton botao_igualdade;
+    private javax.swing.JButton botao_multiplicacao;
+    private javax.swing.JButton botao_porcetagem;
+    private javax.swing.JButton botao_somar;
+    private javax.swing.JButton botao_substracao;
+    private javax.swing.JButton botao_virgula;
+    private javax.swing.JButton botao_voltar;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton mudar_tema;
+    private javax.swing.JButton numero03;
+    private javax.swing.JButton numero_00;
+    private javax.swing.JButton numero_01;
+    private javax.swing.JButton numero_02;
+    private javax.swing.JButton numero_4;
+    private javax.swing.JButton numero_5;
+    private javax.swing.JButton numero_6;
+    private javax.swing.JButton numero_7;
+    private javax.swing.JButton numero_8;
+    private javax.swing.JButton numero_9;
+    private javax.swing.JTextField tela_resultado;
+    // End of variables declaration//GEN-END:variables
+    
+
+}
