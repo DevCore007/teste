@@ -27,7 +27,7 @@ Criar uma aplicação modular, reutilizável e de fácil manutenção, que simul
 
 - 🔐 **Sistema de Login**
   - Um sistema de login com usuário e senha, sem necessidade de criar uma conta.
-  - **Usuário:** admin **| Senha:** 1234
+  - **Usuário:** root **| Senha:** toor
  
 - 📎 **Escolha de projetos**
   - Parte do software em que se deve escolher qual programa executar: *agenda de contatos ou calculadora*.
