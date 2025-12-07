@@ -28,7 +28,6 @@ Criar uma aplicação modular, reutilizável e de fácil manutenção, que simul
 - 🔐 **Sistema de Login**
   - Um sistema de login com usuário e senha, sem necessidade de criar uma conta.
   - Possibilidade de redefinir os campos de login e senha, habilitar e desabilitar a visibilidade da senha.
-  - Alternância entre modo claro e escuro.
   - **Usuário:** root **| Senha:** toor
  
 - 📎 **Escolha de projetos**

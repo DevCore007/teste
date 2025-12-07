@@ -11,7 +11,7 @@
 └── ProjetoPoo.java <-- Classe principal da aplicação, responsável por iniciá-la pela tela de login
 ```
 
-## *️⃣ **Tela de Login**
+## 🔐 **Tela de Login**
 
 ```
 Login/
@@ -21,7 +21,7 @@ Login/
 └── TelaLogin.java <-- Tela onde se deve inserir o login e a senha (root e toor)
 ```
 
-## 🔩 **Escolher Projeto**
+## 📎 **Escolher Projeto**
 
 ```
 EscolhaProjeto/
