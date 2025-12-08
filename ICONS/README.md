@@ -41,7 +41,7 @@
 ![](./brilho-do-sol.png)
 ![](./moon%20(1).png)
 
-## 🌡 **Conversor de temperatura**
+## 🌡 **Ícones do Conversor de temperatura**
 
 ![](./termometro%20(3).png)
 ![](./termometro%20(4).png)
